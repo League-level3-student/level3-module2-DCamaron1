@@ -1,45 +1,47 @@
 package _00_Sorting_Algorithms;
 
 public class _00_SortedArrayChecker {
-	//1. Write a static method called intArraySorted. 
-	//   This method takes in an array of integers
-	//   and it returns a boolean.
-	//   The method returns true if the integer
-	//   array is in ascending order and false otherwise
 	public static boolean intArraySorted(int[] list) {
-		return false;
-		
+		for (int i = 0; i < list.length - 1; i++) {
+			int a = list[i];
+			int b = list[i + 1];
+			if (a > b) {
+				return false;
+			}
+		}
+		return true;
 	}
-	
-	//2. Write a static method called doubleArraySorted. 
-	//   This method takes in an array of doubles
-	//   and it returns a boolean.
-	//   The method returns true if the double
-	//   array is in ascending order and false otherwise
+
 	public static boolean doubleArraySorted(double[] list) {
-		return false;
-		
+		for (int i = 0; i < list.length - 1; i++) {
+			double a = list[i];
+			double b = list[i + 1];
+			if (a > b) {
+				return false;
+			}
+		}
+		return true;
 	}
-	
-	//3. Write a static method called charArraySorted. 
-	//   This method takes in an array of characters
-	//   and it returns a boolean.
-	//   The method returns true if the character
-	//   array is in alphabetical order and false otherwise
-	//   (You can compare characters just like integers)
+
 	public static boolean charArraySorted(char[] list) {
-		return false;
-		
+		for (int i = 0; i < list.length - 1; i++) {
+			char a = list[i];
+			char b = list[i + 1];
+			if (a > b) {
+				return false;
+			}
+		}
+		return true;
 	}
-	
-	//4. Write a static method called stringArraySorted. 
-	//   This method takes in an array of Strings
-	//   and it returns a boolean.
-	//   The method returns true if the String
-	//   array is in alphabetical order and false otherwise
-	//   (Use the compareTo(String) method)
+
 	public static boolean stringArraySorted(String[] list) {
-		return false;
-		
+		for (int i = 0; i < list.length - 1; i++) {
+			String a = list[i];
+			String b = list[i + 1];
+			if (a.compareTo(b) > 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 }
