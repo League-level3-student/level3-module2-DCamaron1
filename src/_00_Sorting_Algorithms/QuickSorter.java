@@ -5,11 +5,6 @@ public class QuickSorter extends Sorter {
 		type = "Quick";
 	}
 	
-	//1. Since this sorting algorithm uses recursion, 
-	//   we'll make a helper method called quickSort.
-	//   Complete the steps in the quickSort method.
-	//  You can use display.updateDisplay() to show the current
-	//   progress on the graph.
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
 		//10. call the quickSort method with 0 and the length of the array minus one
@@ -23,18 +18,18 @@ public class QuickSorter extends Sorter {
 		int j = high;
         //3. create an integer called pivot and set it equal to the element
         //   in the array that is the halfway point between low and high
-		int pivot = (high + low) / 2;
+		int pivot = array[(high + low) / 2];
         //4. make a while loop that goes while i is less than or equal to j
         while (i <= j) {
 		
         	//5. make a while loop that increments i while 
         	//   the array element at i is less than pivot
-            while(array[i] < array[pivot]) {
+            while(array[i] < pivot) {
             	i++;
             }
             //6. make a while loop that decrements j while 
         	//   the array element at j is greater than pivot
-            while(array[j] > array[pivot]) {
+            while(array[j] > pivot) {
             	j--;
             }
             //7. if i is less than or equal to j, 
